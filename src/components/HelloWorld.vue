@@ -286,7 +286,6 @@ type PointType =
 const mapRef = ref<any>(null)
 
 const legendItems = [
-  { label: 'Новая точка', color: 'rgba(21, 101, 192, 1)' },
   { label: 'Мои точки инвентаризации', color: 'rgba(21, 101, 192, 1)' },
   { label: 'Чужие точки инвентаризации', color: 'rgba(138, 178, 224, 1)' },
   { label: 'Точка из реестра, без фото', color: 'rgba(129, 199, 132, 1)' },
@@ -708,10 +707,10 @@ function onMapClick(event: any) {
 
 .legend {
   position: absolute;
-  top: 68px;
+  top: 60px;
   right: 20px;
   z-index: 1000;
-  width: 300px;
+  width: 250px;
   padding: 16px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.96);
