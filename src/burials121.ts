@@ -4,6 +4,7 @@ export const burials121 =
             "cemetery_id": 1,
             "card_id": 121,
             "burial_id": 15978,
+            "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -33,7 +34,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 22699,
+            "burial_id": 22699, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -68,7 +70,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 24636,
+            "burial_id": 24636, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -103,7 +106,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 24710,
+            "burial_id": 24710, "status": 'unknown_burial',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -128,7 +131,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 24780,
+            "burial_id": 24780, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -158,7 +162,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 26477,
+            "burial_id": 26477, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -193,7 +198,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 26687,
+            "burial_id": 26687, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -218,7 +224,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 26944,
+            "burial_id": 26944, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -243,7 +250,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 27043,
+            "burial_id": 27043, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -283,7 +291,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 29049,
+            "burial_id": 29049, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -313,7 +322,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 31769,
+            "burial_id": 31769, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -348,7 +358,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 42010,
+            "burial_id": 42010, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -368,7 +379,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 44300,
+            "burial_id": 44300, "status": 'unknown_burial',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -408,7 +419,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 45232,
+            "burial_id": 45232, "status": 'my_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -434,6 +446,8 @@ export const burials121 =
             "cemetery_id": 1,
             "card_id": 121,
             "burial_id": 46140,
+            "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -463,7 +477,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 47784,
+            "burial_id": 47784, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -493,7 +508,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49459,
+            "burial_id": 49459, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -518,7 +534,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49462,
+            "burial_id": 49462, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -543,7 +560,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49463,
+            "burial_id": 49463, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -568,7 +586,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49465,
+            "burial_id": 49465, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -593,7 +612,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49466,
+            "burial_id": 49466, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -623,7 +643,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49467,
+            "burial_id": 49467, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -643,7 +664,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49502,
+            "burial_id": 49502, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -668,7 +690,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49505,
+            "burial_id": 49505, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -693,7 +716,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49506,
+            "burial_id": 49506, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -713,7 +737,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49507,
+            "burial_id": 49507, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -733,7 +758,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49508,
+            "burial_id": 49508, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -758,7 +784,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49509,
+            "burial_id": 49509, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -793,7 +820,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49510,
+            "burial_id": 49510, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -818,7 +846,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49541,
+            "burial_id": 49541, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -848,7 +877,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49547,
+            "burial_id": 49547, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -868,7 +898,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49548,
+            "burial_id": 49548, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -893,7 +924,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49549,
+            "burial_id": 49549, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -923,7 +955,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49550,
+            "burial_id": 49550, "status": 'other_inventory',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -943,7 +976,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49572,
+            "burial_id": 49572, "status": 'unknown_burial',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -969,6 +1002,8 @@ export const burials121 =
             "cemetery_id": 1,
             "card_id": 121,
             "burial_id": 49574,
+            "status": 'registry_with_photo',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -993,7 +1028,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49575,
+            "burial_id": 49575, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1023,7 +1058,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49576,
+            "burial_id": 49576, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1043,7 +1078,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49577,
+            "burial_id": 49577, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1068,7 +1103,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49578,
+            "burial_id": 49578, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1093,7 +1128,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49579,
+            "burial_id": 49579, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1123,7 +1158,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49580,
+            "burial_id": 49580, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1148,7 +1183,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49581,
+            "burial_id": 49581, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1173,7 +1208,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49582,
+            "burial_id": 49582, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1198,7 +1233,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 49608,
+            "burial_id": 49608, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1223,7 +1258,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 52898,
+            "burial_id": 52898, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1263,7 +1298,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 59398,
+            "burial_id": 59398, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1293,7 +1328,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 161474,
+            "burial_id": 161474, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1318,7 +1353,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 166486,
+            "burial_id": 166486, "status": 'registry_no_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1363,7 +1398,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 174860,
+            "burial_id": 174860, "status": 'registry_no_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1388,7 +1423,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175048,
+            "burial_id": 175048, "status": 'registry_no_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1413,7 +1448,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175164,
+            "burial_id": 175164, "status": 'registry_no_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1458,7 +1493,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175342,
+            "burial_id": 175342, "status": 'registry_no_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1483,7 +1518,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175344,
+            "burial_id": 175344, "status": 'registry_no_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1518,7 +1553,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175418,
+            "burial_id": 175418, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1543,7 +1578,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175631,
+            "burial_id": 175631, "status": 'registry_with_photo',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1578,7 +1613,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175705,
+            "burial_id": 175705, "status": 'public_burial',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1613,7 +1648,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175959,
+            "burial_id": 175959, "status": 'unknown_burial',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1644,6 +1679,7 @@ export const burials121 =
             "cemetery_id": 1,
             "card_id": 121,
             "burial_id": 175972,
+            "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1668,7 +1704,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 175985,
+            "burial_id": 175985, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1693,7 +1729,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 176219,
+            "burial_id": 176219, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1718,7 +1754,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 176354,
+            "burial_id": 176354, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1743,7 +1779,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 176448,
+            "burial_id": 176448, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1768,7 +1804,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 176598,
+            "burial_id": 176598, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1793,7 +1829,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 176832,
+            "burial_id": 176832, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1843,7 +1879,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 177940,
+            "burial_id": 177940, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1868,7 +1904,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 178271,
+            "burial_id": 178271, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1903,7 +1939,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 178554,
+            "burial_id": 178554, "status": 'processing',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1939,6 +1975,7 @@ export const burials121 =
             "cemetery_id": 1,
             "card_id": 121,
             "burial_id": 178660,
+            "status": "need_redo",
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -1968,7 +2005,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 179448,
+            "burial_id": 179448, "status": "need_redo",
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2003,7 +2041,8 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 182391,
+            "burial_id": 182391, "status": "need_redo",
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2029,6 +2068,8 @@ export const burials121 =
             "cemetery_id": 1,
             "card_id": 121,
             "burial_id": 186813,
+            "status": 'rejected',
+
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2053,7 +2094,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 187778,
+            "burial_id": 187778, "status": 'rejected',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2078,7 +2119,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 200991,
+            "burial_id": 200991, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2103,7 +2144,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 201007,
+            "burial_id": 201007, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2128,7 +2169,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 201008,
+            "burial_id": 201008, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2153,7 +2194,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 206390,
+            "burial_id": 206390, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2188,7 +2229,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 206393,
+            "burial_id": 206393, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2218,7 +2259,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 206589,
+            "burial_id": 206589, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2258,7 +2299,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 206776,
+            "burial_id": 206776, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2283,7 +2324,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 206803,
+            "burial_id": 206803, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2308,7 +2349,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 207223,
+            "burial_id": 207223, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2333,7 +2374,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 207224,
+            "burial_id": 207224, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2358,7 +2399,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 207922,
+            "burial_id": 207922, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2383,7 +2424,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 212950,
+            "burial_id": 212950, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2408,7 +2449,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 213172,
+            "burial_id": 213172, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2438,7 +2479,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 213646,
+            "burial_id": 213646, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2463,7 +2504,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 213867,
+            "burial_id": 213867, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2488,7 +2529,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 214329,
+            "burial_id": 214329, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2513,7 +2554,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 214630,
+            "burial_id": 214630, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2538,7 +2579,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 251616,
+            "burial_id": 251616, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2568,7 +2609,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 255133,
+            "burial_id": 255133, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2598,7 +2639,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 265631,
+            "burial_id": 265631, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2633,7 +2674,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 285273,
+            "burial_id": 285273, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2658,7 +2699,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 299420,
+            "burial_id": 299420, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2688,7 +2729,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 423319,
+            "burial_id": 423319, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2718,7 +2759,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 425542,
+            "burial_id": 425542, "status": 'my_inventory',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [
@@ -2743,7 +2784,7 @@ export const burials121 =
         {
             "cemetery_id": 1,
             "card_id": 121,
-            "burial_id": 456089,
+            "burial_id": 456089, "status": 'new',
             "burial_coordinates": {
                 "type": "Point",
                 "coordinates": [

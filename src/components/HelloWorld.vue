@@ -223,7 +223,7 @@
           <ol-feature :properties="{ isNewPoint: true }">
             <ol-geom-polygon :coordinates="getCirclePolygon(newPointCoordinates, 0.0000085)" />
             <ol-style>
-              <ol-style-fill color="rgba(255, 109, 0, 1)" />
+              <ol-style-fill color="rgba(21, 101, 192, 1)" />
             </ol-style>
           </ol-feature>
 
@@ -244,7 +244,7 @@
           >
             <ol-geom-polygon :coordinates="getCirclePolygon(newPointCoordinates, 0.0000065)" />
             <ol-style>
-              <ol-style-fill color="rgba(255, 109, 0, 1)" />
+              <ol-style-fill color="rgba(21, 101, 192, 1)" />
             </ol-style>
           </ol-feature>
         </ol-source-vector>
@@ -286,7 +286,7 @@ type PointType =
 const mapRef = ref<any>(null)
 
 const legendItems = [
-  { label: 'Новая точка', color: 'rgba(255, 109, 0, 1)' },
+  { label: 'Новая точка', color: 'rgba(21, 101, 192, 1)' },
   { label: 'Мои точки инвентаризации', color: 'rgba(21, 101, 192, 1)' },
   { label: 'Чужие точки инвентаризации', color: 'rgba(138, 178, 224, 1)' },
   { label: 'Точка из реестра, без фото', color: 'rgba(129, 199, 132, 1)' },
@@ -315,7 +315,7 @@ const cemeteryPolygon = cemetery.coordinates.coordinates
 const cards = cemetery.card_list
 
 const pointColors: Record<PointType, string> = {
-  new: 'rgba(255, 109, 0, 1)',
+  new: 'rgba(21, 101, 192, 1)',
   my_inventory: 'rgba(21, 101, 192, 1)',
   other_inventory: 'rgba(138, 178, 224, 1)',
   registry_no_photo: 'rgba(129, 199, 132, 1)',
@@ -340,30 +340,12 @@ const selectedCard = computed(() => {
 })
 
 const burialPoints = computed(() => {
-  const types = Object.keys(pointColors).filter(
-    type => type !== 'new'
-  ) as PointType[]
-
-  const list = burials121
+  return burials121
     .filter(burial => burial.card_id === 121)
-    .map((burial, index) => {
-      let pointType: PointType = types[index % types.length]
-
-      if (burial.photo_list?.length) {
-        pointType = 'registry_with_photo'
-      }
-
-      return {
-        ...burial,
-        pointType,
-      }
-    })
-
-  if (list.length) {
-    list[list.length - 1].pointType = 'new'
-  }
-
-  return list
+    .map(burial => ({
+      ...burial,
+      pointType: burial.status as PointType,
+    }))
 })
 
 const newPoint = computed(() => {
