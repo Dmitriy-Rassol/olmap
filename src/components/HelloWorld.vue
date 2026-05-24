@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <ol-view :center="toCoordinate(center)" :zoom="16.5" />
+      <ol-view :center="center" :zoom="16.5" />
 
       <ol-zoom-control />
       <ol-scale-line-control />
@@ -75,7 +75,7 @@
             <ol-feature>
               <ol-geom-polygon
                 :coordinates="getCirclePolygon(
-                  toCoordinate(burial.burial_coordinates.coordinates),
+                  burial.burial_coordinates.coordinates,
                   0.0000085
                 )"
               />
@@ -87,7 +87,7 @@
             <ol-feature>
               <ol-geom-polygon
                 :coordinates="getCirclePolygon(
-                  toCoordinate(burial.burial_coordinates.coordinates),
+                  burial.burial_coordinates.coordinates,
                   0.000008
                 )"
               />
@@ -105,7 +105,7 @@
             >
               <ol-geom-polygon
                 :coordinates="getCirclePolygon(
-                  toCoordinate(burial.burial_coordinates.coordinates),
+                  burial.burial_coordinates.coordinates,
                   0.0000065
                 )"
               />
@@ -122,7 +122,7 @@
           <ol-feature v-for="radius in selectedPointGlowRadii" :key="radius">
             <ol-geom-polygon
               :coordinates="getCirclePolygon(
-                toCoordinate(selectedPoint.burial_coordinates.coordinates),
+                selectedPoint.burial_coordinates.coordinates,
                 radius
               )"
             />
@@ -138,7 +138,7 @@
           <ol-feature>
             <ol-geom-polygon
               :coordinates="getCirclePolygon(
-                toCoordinate(selectedPoint.burial_coordinates.coordinates),
+                selectedPoint.burial_coordinates.coordinates,
                 0.0000085
               )"
             />
@@ -150,7 +150,7 @@
           <ol-feature>
             <ol-geom-polygon
               :coordinates="getCirclePolygon(
-                toCoordinate(selectedPoint.burial_coordinates.coordinates),
+                selectedPoint.burial_coordinates.coordinates,
                 0.000008
               )"
             />
@@ -168,7 +168,7 @@
           >
             <ol-geom-polygon
               :coordinates="getCirclePolygon(
-                toCoordinate(selectedPoint.burial_coordinates.coordinates),
+                selectedPoint.burial_coordinates.coordinates,
                 0.0000065
               )"
             />
@@ -193,7 +193,11 @@
             <ol-geom-polygon :coordinates="getCirclePolygon(newPointCoordinates, 0.000016)" />
             <ol-style>
               <ol-style-fill color="rgba(0,0,0,0)" />
-              <ol-style-stroke color="rgba(255, 109, 0, 1)" :width="1" :line-dash="[4, 4]" />
+              <ol-style-stroke
+                color="rgba(255, 109, 0, 1)"
+                :width="1"
+                :line-dash="[4, 4]"
+              />
             </ol-style>
           </ol-feature>
 
@@ -201,7 +205,11 @@
             <ol-geom-polygon :coordinates="getCirclePolygon(newPointCoordinates, 0.000025)" />
             <ol-style>
               <ol-style-fill color="rgba(0,0,0,0)" />
-              <ol-style-stroke color="rgba(255, 109, 0, 1)" :width="1" :line-dash="[4, 4]" />
+              <ol-style-stroke
+                color="rgba(255, 109, 0, 1)"
+                :width="1"
+                :line-dash="[4, 4]"
+              />
             </ol-style>
           </ol-feature>
 
@@ -241,12 +249,10 @@
 <script setup lang="ts">
 import {
   computed,
-  markRaw,
   nextTick,
   onBeforeUnmount,
   onMounted,
   ref,
-  shallowRef,
   watchEffect,
 } from 'vue'
 
@@ -293,7 +299,7 @@ const wasDraggingNewPoint = ref(false)
 
 const dragOffset = ref<Coordinate | null>(null)
 
-const olMapInstance = shallowRef<Map | null>(null)
+let olMapInstance: Map | null = null
 let viewportElement: HTMLElement | null = null
 
 const center = cemetery.coordinates_center.coordinates
@@ -326,7 +332,9 @@ const selectedCard = computed(() => {
 })
 
 const burialPoints = computed(() => {
-  const types = Object.keys(pointColors).filter(type => type !== 'new') as PointType[]
+  const types = Object.keys(pointColors).filter(
+    type => type !== 'new'
+  ) as PointType[]
 
   const list = burials121
     .filter(burial => burial.card_id === 121)
@@ -351,7 +359,9 @@ const burialPoints = computed(() => {
 })
 
 const newPoint = computed(() => {
-  return burialPoints.value.find(burial => burial.pointType === 'new') || null
+  return burialPoints.value.find(
+    burial => burial.pointType === 'new'
+  ) || null
 })
 
 const newPointCoordinates = ref<Coordinate | null>(null)
@@ -359,42 +369,53 @@ const newPointCoordinates = ref<Coordinate | null>(null)
 watchEffect(() => {
   if (!newPoint.value || newPointCoordinates.value) return
 
-  newPointCoordinates.value = toCoordinate(newPoint.value.burial_coordinates.coordinates)
+  const coords = newPoint.value.burial_coordinates.coordinates
+
+  newPointCoordinates.value = [
+    Number(coords[0] ?? 0),
+    Number(coords[1] ?? 0),
+  ]
 })
 
 const selectedPoint = computed(() => {
-  return burialPoints.value.find(burial => burial.burial_id === selectedPointId.value) || null
+  return burialPoints.value.find(
+    burial => burial.burial_id === selectedPointId.value
+  ) || null
 })
 
 const normalBurialPoints = computed(() => {
   return burialPoints.value.filter(
-    burial => burial.burial_id !== selectedPointId.value && burial.pointType !== 'new'
+    burial =>
+      burial.burial_id !== selectedPointId.value &&
+      burial.pointType !== 'new'
   )
 })
 
 onMounted(async () => {
   await nextTick()
 
-  const map = mapRef.value?.map as Map | undefined
+  olMapInstance = (mapRef.value?.map ?? null) as unknown as Map | null
 
-  if (!map) return
+  if (!olMapInstance) return
 
-  olMapInstance.value = markRaw(map)
-
-  viewportElement = olMapInstance.value.getViewport()
+  viewportElement = olMapInstance.getViewport()
 
   viewportElement.addEventListener('mousedown', onNativeMouseDown)
 
-  viewportElement.addEventListener('touchstart', onNativeTouchStart, {
-    passive: false,
-  })
+  viewportElement.addEventListener(
+    'touchstart',
+    onNativeTouchStart,
+    { passive: false }
+  )
 
   window.addEventListener('mousemove', onNativeMouseMove)
   window.addEventListener('mouseup', onNativeMouseUp)
 
-  window.addEventListener('touchmove', onNativeTouchMove, {
-    passive: false,
-  })
+  window.addEventListener(
+    'touchmove',
+    onNativeTouchMove,
+    { passive: false }
+  )
 
   window.addEventListener('touchend', onNativeTouchEnd)
   window.addEventListener('touchcancel', onNativeTouchEnd)
@@ -414,25 +435,27 @@ onBeforeUnmount(() => {
   window.removeEventListener('touchcancel', onNativeTouchEnd)
 
   viewportElement = null
-  olMapInstance.value = null
+  olMapInstance = null
 })
 
-function toCoordinate(coords: number[] | Coordinate): Coordinate {
-  return [coords[0] ?? 0, coords[1] ?? 0]
-}
-
 function setMapDragPanActive(active: boolean) {
-  if (!olMapInstance.value) return
+  if (!olMapInstance) return
 
-  olMapInstance.value.getInteractions().forEach((interaction: any) => {
+  olMapInstance.getInteractions().forEach((interaction: any) => {
     if (interaction.constructor?.name === 'DragPan') {
       interaction.setActive(active)
     }
   })
 }
 
-function getCirclePolygon(coords: Coordinate, radius = 0.00001, segments = 64): Coordinate[][] {
-  const [lng, lat] = coords
+function getCirclePolygon(
+  coords: number[] | Coordinate,
+  radius = 0.00001,
+  segments = 64
+): Coordinate[][] {
+  const lng = Number(coords[0] ?? 0)
+  const lat = Number(coords[1] ?? 0)
+
   const ring: Coordinate[] = []
 
   const latRad = (lat * Math.PI) / 180
@@ -454,18 +477,22 @@ function getPointColor(type: PointType) {
   return pointColors[type]
 }
 
-function getEventCoordinate(event: MouseEvent | Touch): Coordinate | null {
-  if (!olMapInstance.value) return null
+function getEventCoordinate(event: MouseEvent | Touch) {
+  if (!olMapInstance) return null
 
-  return olMapInstance.value.getEventCoordinate(event as unknown as MouseEvent) as Coordinate
+  return olMapInstance.getEventCoordinate(
+    event as unknown as MouseEvent
+  ) as Coordinate
 }
 
 function isEventNearNewPoint(event: MouseEvent | Touch) {
-  if (!olMapInstance.value) return false
+  if (!olMapInstance) return false
 
-  const pixel = olMapInstance.value.getEventPixel(event as unknown as UIEvent)
+  const pixel = olMapInstance.getEventPixel(
+    event as unknown as UIEvent
+  )
 
-  const feature = olMapInstance.value.forEachFeatureAtPixel(
+  const feature = olMapInstance.forEachFeatureAtPixel(
     pixel,
     (feature: any) => feature,
     {
@@ -610,8 +637,8 @@ function onNativeTouchEnd(event: TouchEvent) {
 function onMapClick(event: any) {
   if (isDraggingNewPoint.value || wasDraggingNewPoint.value) return
 
-  if (!olMapInstance.value) {
-    olMapInstance.value = markRaw(event.map as Map)
+  if (!olMapInstance) {
+    olMapInstance = event.map as unknown as Map
   }
 
   const feature = event.map.forEachFeatureAtPixel(
