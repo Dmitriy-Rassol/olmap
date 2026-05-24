@@ -481,12 +481,6 @@ function getPointColor(type: PointType) {
   return pointColors[type]
 }
 
-function getEventPixel(event: MouseEvent | Touch) {
-  if (!olMapInstance) return null
-
-  return olMapInstance.getEventPixel(event as unknown as UIEvent)
-}
-
 function getEventCoordinate(event: MouseEvent | Touch) {
   if (!olMapInstance) return null
 
