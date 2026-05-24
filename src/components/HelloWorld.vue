@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <ol-view :center="center" :zoom="16.5" />
+      <ol-view :center="center" :zoom="19" />
 
       <ol-zoom-control />
       <ol-scale-line-control />
@@ -28,6 +28,7 @@
         <ol-source-osm />
       </ol-tile-layer>
 
+      <!-- Граница кладбища -->
       <ol-vector-layer :z-index="1">
         <ol-source-vector>
           <ol-feature>
@@ -40,6 +41,7 @@
         </ol-source-vector>
       </ol-vector-layer>
 
+      <!-- Карты -->
       <ol-vector-layer :z-index="2">
         <ol-source-vector>
           <ol-feature
@@ -57,6 +59,7 @@
         </ol-source-vector>
       </ol-vector-layer>
 
+      <!-- Выбранная карта -->
       <ol-vector-layer v-if="selectedCard" :z-index="100">
         <ol-source-vector>
           <ol-feature>
@@ -69,6 +72,7 @@
         </ol-source-vector>
       </ol-vector-layer>
 
+      <!-- Обычные точки -->
       <ol-vector-layer :z-index="200">
         <ol-source-vector>
           <template v-for="burial in normalBurialPoints" :key="burial.burial_id">
@@ -117,6 +121,7 @@
         </ol-source-vector>
       </ol-vector-layer>
 
+      <!-- Подсветка выбранной точки -->
       <ol-vector-layer v-if="selectedPoint" :z-index="299">
         <ol-source-vector>
           <ol-feature v-for="radius in selectedPointGlowRadii" :key="radius">
@@ -133,6 +138,7 @@
         </ol-source-vector>
       </ol-vector-layer>
 
+      <!-- Выбранная точка -->
       <ol-vector-layer v-if="selectedPoint" :z-index="300">
         <ol-source-vector>
           <ol-feature>
@@ -179,6 +185,7 @@
         </ol-source-vector>
       </ol-vector-layer>
 
+      <!-- Новая точка -->
       <ol-vector-layer v-if="newPoint && newPointCoordinates" :z-index="400">
         <ol-source-vector>
           <ol-feature :properties="{ isNewPoint: true }">
@@ -257,6 +264,7 @@ import {
 } from 'vue'
 
 import type Map from 'ol/Map'
+import DragPan from 'ol/interaction/DragPan'
 
 import { cemetery } from '../cemetery'
 import { burials121 } from '../burials121'
@@ -441,8 +449,8 @@ onBeforeUnmount(() => {
 function setMapDragPanActive(active: boolean) {
   if (!olMapInstance) return
 
-  olMapInstance.getInteractions().forEach((interaction: any) => {
-    if (interaction.constructor?.name === 'DragPan') {
+  olMapInstance.getInteractions().forEach(interaction => {
+    if (interaction instanceof DragPan) {
       interaction.setActive(active)
     }
   })
@@ -694,6 +702,7 @@ function onMapClick(event: any) {
   border-radius: 18px;
   overflow: hidden;
   position: relative;
+  touch-action: none;
 }
 
 .map--dragging {

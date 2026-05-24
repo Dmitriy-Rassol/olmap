@@ -1,6 +1,7 @@
 export const cemetery = {
   coordinates_center: {
-    coordinates: [37.924359705, 59.150626156],
+    coordinates: [37.926293,
+      59.147237],
   },
 
   coordinates: {
